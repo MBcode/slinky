@@ -3,7 +3,7 @@
 ## Overview
 Service for the DataONE Linked Open Data graph.
 
-This repository contains a deployable service that continuously updates the [DataOne](https://www.dataone.org/) [Linked Open Data](http://linkeddata.org/) graph. It was originally developed as a provider of data for the [GeoLink](http://www.geolink.org/) project, but now is a core component of the DataONE services. The service uses [Docker Compose](https://docs.docker.com/compose/) to manage a set of [Docker](https://www.docker.com/) containers that run the service. The service is intended to be deployed to a virtual machine and run with [Docker Compose](https://docs.docker.com/compose/).
+This repository contains a deployable service that continuously updates the [DataOne](https://www.dataone.org/) [Linked Open Data](https://web.archive.org/web/20090314115106/http://linkeddata.org//) [graph](http://cas.lod-cloud.net/). It was originally developed as a provider of data for the [GeoLink](http://www.geolink.org/) project:[ec](https://www.earthcube.org/group/geolink) [demo](https://web.archive.org/web/20200228033929/http://demo.geolink.org/), but now is a core component of the DataONE services. The service uses [Docker Compose](https://docs.docker.com/compose/) to manage a set of [Docker](https://www.docker.com/) containers that run the service. The service is intended to be deployed to a virtual machine and run with [Docker Compose](https://docs.docker.com/compose/).
 
 The main infrastructure of the service is composed of four [Docker Compose](https://docs.docker.com/compose/) services:
 
