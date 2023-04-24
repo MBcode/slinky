@@ -1,5 +1,5 @@
 from locust import HttpLocust, TaskSet, task
-import urllib
+import urllib.request, urllib.parse, urllib.error
 from faker import Faker
 
 fake = Faker()
@@ -20,7 +20,7 @@ class SPARQLInsertTasks(TaskSet):
 
     @task
     def insert_realistic(self):
-        self.client.get("/sparql/?query=INSERT+DATA+%7B+GRAPH+%3Chttps%3A%2F%2Fdataone.org%3E+%7B+%3Chttp%3A%2F%2Fexample.com%2FX%3E+%3Chttp%3A%2F%2Fexample.com%2FisA%3E+%22{}%22+%7D%7D".format(urllib.quote(fake.name())))
+        self.client.get("/sparql/?query=INSERT+DATA+%7B+GRAPH+%3Chttps%3A%2F%2Fdataone.org%3E+%7B+%3Chttp%3A%2F%2Fexample.com%2FX%3E+%3Chttp%3A%2F%2Fexample.com%2FisA%3E+%22{}%22+%7D%7D".format(urllib.parse.quote(fake.name())))
 
 class QueryLocust(HttpLocust):
     weight = 5
