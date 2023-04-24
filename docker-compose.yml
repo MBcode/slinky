@@ -17,7 +17,7 @@ services:
   web:
     build: deploy/docker/web
     ports:
-      - "8080:8080"
+      - "8080:8082"
     environment:
       VIRTUOSO_URL: "http://virtuoso:8890"
   worker_default:
